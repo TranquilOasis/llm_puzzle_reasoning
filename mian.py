@@ -76,6 +76,7 @@ def train(model, train_loader, optimizer, criterion, device):
         optimizer.step()
 
 # Initialize model, tokenizer, and data loader
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = ClassificationModel(768, 2).to(device)
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 max_seq_length = 128
