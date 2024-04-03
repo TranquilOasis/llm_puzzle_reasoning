@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-puzzle-reasoning"
+version = "0.1.0"
+description = "A project focusing on enhancing LLM's reasoning capabilities through inner monologue processing and puzzle-solving."
+authors = [{name = "Timothy Hall", email = "tjhall1272@gmail.com"}]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "torch>=1.10.0",
+    "transformers>=4.15.0",
+    "spacy>=3.2.0",
+    "pandas>=1.3.5",
+    "numpy>=1.21.4",
+    "nltk>=3.6.5",
+    "scikit-learn>=0.24.2"
+]
+[project.optional-dependencies]
+# development dependency groups
+"dev" = [
+    "pytest>=6.0",
+    "ruff>=0.2.2"
+]
